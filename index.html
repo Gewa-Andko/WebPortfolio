@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#1A0F0A">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portofolio Gewa Andoko - Sistem Komputer, Web Developer, Multimedia">
+    <meta name="keywords" content="Gewa Andoko, portofolio, web developer, sistem komputer">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Gew - Portofolio</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+    <link rel="preload" href="assets/images/profile.jpeg" as="image">
+    <link rel="preload" href="assets/images/logo.png" as="image">
+    <link rel="stylesheet" href="frontend/styles.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Javanese:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Batik Pattern Overlay -->
+    <div class="batik-bg" id="batikBg"></div>
+    
+    <!-- Animated Floating Elements -->
+    <div class="floating-elements" aria-hidden="true" id="floatingElements">
+        <div class="float-item float-1">꧁</div>
+        <div class="float-item float-2">꧂</div>
+        <div class="float-item float-4">◈</div>
+        <div class="float-item float-5">✦</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-image-wrapper" id="logoGStyle">
+                    <img src="assets/images/logo.png" alt="Logo Gewa Andoko" class="logo-image" draggable="false">
+                </div>
+                <span class="logo-aksara">ꦒꦺꦮ</span>
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Beranda</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#education" class="nav-link">Pendidikan</a></li>
+                    <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                    <li><a href="#projects" class="nav-link">Proyek</a></li>
+                    <li><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-aksara">ꦲꦏꦸ ꦒꦺꦮ ꦄꦤ꧀ꦢꦺꦴꦏꦺꦴ</div>
+                <p class="hero-subtitle">Sistem Komputer</p>
+                <h1 class="hero-title">Gewa <span class="highlight">Andoko</span></h1>
+                <p class="hero-description">
+                    Lulusan Sistem Komputer dengan passion di bidang teknologi, 
+                    pengembangan web, dan inovasi digital. Menggabungkan keahlian 
+                    teknis dengan kreativitas untuk menciptakan solusi modern.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-folder-open"></i> Lihat Proyek
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Hubungi Saya
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Gewa-Andko" target="_blank" class="social-icon" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/gewa-andoko" target="_blank" class="social-icon" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/gewa_a" target="_blank" class="social-icon" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="ornament-circle">
+                    <div class="ornament-ring"></div>
+                    <div class="ornament-ring-2"></div>
+                    <svg class="ornament-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100 10 C140 10 190 50 190 100 C190 150 140 190 100 190 C60 190 10 150 10 100 C10 50 60 10 100 10Z" fill="none" stroke="rgba(139, 0, 0, 0.3)" stroke-width="2"/>
+                        <path d="M100 30 C130 30 170 60 170 100 C170 140 130 170 100 170 C70 170 30 140 30 100 C30 60 70 30 100 30Z" fill="none" stroke="rgba(212, 160, 23, 0.3)" stroke-width="2"/>
+                        <path d="M100 50 C120 50 150 75 150 100 C150 125 120 150 100 150 C80 150 50 125 50 100 C50 75 80 50 100 50Z" fill="none" stroke="rgba(139, 0, 0, 0.4)" stroke-width="1.5"/>
+                        <circle cx="100" cy="15" r="4" fill="rgba(139, 0, 0, 0.5)"/>
+                        <circle cx="100" cy="185" r="4" fill="rgba(139, 0, 0, 0.5)"/>
+                        <circle cx="15" cy="100" r="4" fill="rgba(139, 0, 0, 0.5)"/>
+                        <circle cx="185" cy="100" r="4" fill="rgba(139, 0, 0, 0.5)"/>
+                        <circle cx="50" cy="30" r="3" fill="rgba(212, 160, 23, 0.4)"/>
+                        <circle cx="150" cy="30" r="3" fill="rgba(212, 160, 23, 0.4)"/>
+                        <circle cx="50" cy="170" r="3" fill="rgba(212, 160, 23, 0.4)"/>
+                        <circle cx="150" cy="170" r="3" fill="rgba(212, 160, 23, 0.4)"/>
+                    </svg>
+                    <div class="ornament-center-text">ꦒꦺꦮ</div>
+                </div>
+            </div>
+        </div>
+        <div class="batik-divider">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+                <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="var(--section-bg)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-aksara">ꦧꦧ꧀ ꦥꦶꦱꦤ꧀</span>
+                <h2 class="section-title">Tentang <span class="highlight">Saya</span></h2>
+                <div class="section-line">
+                    <span class="line-ornament"></span>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <img src="assets/images/profile.jpeg?v=2" alt="Gewa Andoko" class="profile-photo" loading="lazy" decoding="async" width="300" height="360">
+                        </div>
+                        <div class="frame-ornament tl"></div>
+                        <div class="frame-ornament tr"></div>
+                        <div class="frame-ornament bl"></div>
+                        <div class="frame-ornament br"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                <h3>Front-End, Back-End & Mobile Development | Multimedia</h3>
+                    <p>
+                        Saya <strong>Gewa Andoko</strong>, lulusan <strong>Sistem Komputer</strong> 
+                        yang memiliki ketertarikan mendalam dalam dunia teknologi informasi. 
+                        Saat ini saya sedang <strong>Exploring Front-End & Back-End Web Development, dan Mobile Apps</strong> 
+                        untuk terus mengembangkan kemampuan di bidang pengembangan perangkat lunak.
+                    </p>
+                    <p>
+                        Selain coding, saya juga suka <strong>Hunting foto dan Videografi</strong> — 
+                        menangkap momen-momen berharga melalui lensa kamera. Saya percaya bahwa 
+                        teknologi adalah jembatan menuju masa depan yang lebih baik. 
+                        Melalui kombinasi antara keahlian teknis dan kreativitas, 
+                        saya siap berkontribusi dalam menciptakan solusi inovatif 
+                        yang bermanfaat bagi masyarakat luas.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">S.Kom</span>
+                            <span class="stat-label">Gelar</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Sistem Komputer</span>
+                            <span class="stat-label">Program Studi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Semangat Belajar</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Gewa-Andko" target="_blank" class="btn btn-primary" rel="noopener">
+                        <i class="fab fa-github"></i> GitHub Saya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-aksara">ꦧꦧ꧀ ꦏꦥꦶꦁ</span>
+                <h2 class="section-title">Riwayat <span class="highlight">Pendidikan</span></h2>
+                <div class="section-line">
+                    <span class="line-ornament"></span>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="far fa-calendar-alt"></i> 2024 - Sekarang
+                        </div>
+                        <h3>Strata 1 (S1) Sistem Komputer</h3>
+                        <h4>Universitas Pamulang Serang</h4>
+                        <p>
+                            Sedang menempuh pendidikan di bidang Sistem Komputer, 
+                            memperdalam pengetahuan dalam pengembangan perangkat lunak, 
+                            arsitektur sistem, dan teknologi informasi.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Pengembangan Web</span>
+                            <span>Mobile Apps</span>
+                            <span>Basis Data</span>
+                            <span>Sistem Operasi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="far fa-calendar-alt"></i> 2021 - 2024
+                        </div>
+                        <h3>Sekolah Menengah Kejuruan (SMK)</h3>
+                        <h4>SMKN 11 Kab. Tangerang</h4>
+                        <p>
+                            Menempuh pendidikan kejuruan dengan jurusan Multimedia, 
+                            mempelajari desain grafis, fotografi, videografi, dan animasi. 
+                            Lulus pada tahun 2024/2025 dengan kompetensi di bidang multimedia.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Desain Grafis</span>
+                            <span>Fotografi</span>
+                            <span>Videografi</span>
+                            <span>Animasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-aksara">ꦧꦧ꧀ ꦏꦥꦶꦁ</span>
+                <h2 class="section-title">Keahlian & <span class="highlight">Kompetensi</span></h2>
+                <div class="section-line">
+                    <span class="line-ornament"></span>
+                </div>
+            </div>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Pengembangan Web & Mobile</h3>
+                    <div class="skill-grid">
+                        <div class="skill-tag">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML & CSS</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Apps</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-database"></i>
+                            <span>Laravel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Basis Data & Backend</h3>
+                    <div class="skill-grid">
+                        <div class="skill-tag">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-server"></i>
+                            <span>REST API</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-cloud"></i>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Multimedia & Tools</h3>
+                    <div class="skill-grid">
+                        <div class="skill-tag">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git & GitHub</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Photoshop</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-video"></i>
+                            <span>Premiere Pro</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-camera"></i>
+                            <span>Fotografi</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-film"></i>
+                            <span>Videografi</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-cube"></i>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-aksara">ꦧꦧ꧀ ꦏꦥꦶꦁ</span>
+                <h2 class="section-title">Proyek <span class="highlight">Terbaru</span></h2>
+                <div class="section-line">
+                    <span class="line-ornament"></span>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Dompetku - App Accounting</h3>
+                        <p>
+                            Aplikasi mobile untuk menghitung pengeluaran bulanan. 
+                            Mencatat dan memonitor keuangan pribadi dengan mudah dan efisien.
+                        </p>
+                        <div class="project-tags">
+                            <span>Mobile App</span>
+                            <span>Accounting</span>
+                            <span>Finance</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gewa-Andko/App-Accounting" target="_blank" rel="noopener"><i class="fab fa-github"></i> Kode</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Coming Soon Projecting~</h3>
+                        <p>
+                            Proyek baru sedang dalam tahap pengembangan. 
+                            Nantikan sesuatu yang menarik dan inovatif dalam waktu dekat!
+                        </p>
+                        <div class="project-tags">
+                            <span>Coming Soon</span>
+                            <span>In Development</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gewa-Andko" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>IoT Smart Home</h3>
+                        <p>
+                            Sistem monitoring dan kontrol perangkat rumah pintar berbasis 
+                            Internet of Things menggunakan Arduino dan Python.
+                        </p>
+                        <div class="project-tags">
+                            <span>Arduino</span>
+                            <span>Python</span>
+                            <span>IoT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gewa-Andko" target="_blank" rel="noopener"><i class="fab fa-github"></i> Kode</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-aksara">ꦧꦧ꧀ ꦏꦥꦶꦁ</span>
+                <h2 class="section-title">Hubungi <span class="highlight">Saya</span></h2>
+                <p class="section-subtitle">Klik Gmail untuk info lebih lanjut</p>
+                <div class="section-line">
+                    <span class="line-ornament"></span>
+                </div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Lokasi</h4>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item disabled" id="gmailContact" onclick="showGmailPopup()">
+                        <div class="contact-link">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email (Gmail) <span class="badge-pending">Segera hadir</span></h4>
+                                <p>~</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item disabled" onclick="showWhatsappPopup()">
+                        <div class="contact-link">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp <span class="badge-pending">Segera hadir</span></h4>
+                                <p>~</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://instagram.com/gewa_a" target="_blank" class="contact-link" rel="noopener">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p>@gewa_a</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/Gewa-Andko" target="_blank" class="contact-link" rel="noopener">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>github.com/Gewa-Andko</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://linkedin.com/in/gewa-andoko" target="_blank" class="contact-link" rel="noopener">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/gewa-andoko</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-social">
+                        <h4>Ikuti Saya</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/Gewa-Andko" target="_blank" class="social-link" rel="noopener"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/gewa-andoko" target="_blank" class="social-link" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://instagram.com/gewa_a" target="_blank" class="social-link" rel="noopener"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/6281234567890" target="_blank" class="social-link" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Nama Lengkap" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subjek" required>
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Pesan" required></textarea>
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="batik-footer-divider">
+            <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+                <path d="M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z" fill="var(--bg-dark)"/>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-logo">
+                    <span class="logo-aksara">ꦒꦺꦮ</span>
+                    <span class="logo-text">Gewa Andoko</span>
+                </div>
+                <p class="footer-quote">
+                    "Teknologi adalah jembatan menuju masa depan yang lebih baik."
+                </p>
+                <div class="footer-aksara">
+                    ꦲꦏꦸ ꦒꦺꦮ ꦄꦤ꧀ꦢꦺꦴꦏꦺꦴ
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Gewa Andoko. All Rights Reserved.</p>
+                    <p class="footer-credit">Dibuat dengan <i class="fas fa-heart"></i> dan semangat budaya Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="frontend/script.js?v=2" defer></script>
+</body>
+</html>
